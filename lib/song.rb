@@ -28,4 +28,34 @@ class Song
   def self.genres
     @@genres.uniq
   end
+  
+  def genre_total
+  
+    epoch = 0
+    count_rap = 0
+    count_pop = 0
+    count_sd = 0
+
+    while epoch < @@genres.length
+    if @@genres[epoch] == @@genres.uniq[0]
+      count_rap+=1
+    elsif @@genres[epoch] == @@genres.uniq[1]
+      count_pop +=1
+    elsif @@genres[epoch] == @@genres.uniq[2]
+      count_sd +=1
+    end
+        
+    epoch +=1
+    end
+
+    epoch_2nd = 0
+    genre_total = {}
+
+    genre_total[@@genres.uniq[0]] = [count_rap]
+    genre_total[@@genres.uniq[1]] = [count_pop]
+    #genre_total[@@genres.uniq[2]] = [count_sd]
+    
+    genre_total
+
+  end
 end
