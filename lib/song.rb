@@ -21,8 +21,4 @@ class Song
   def artist 
     @artist
   end
-
-  def artist_all 
-    @@artist
-  end
 end
