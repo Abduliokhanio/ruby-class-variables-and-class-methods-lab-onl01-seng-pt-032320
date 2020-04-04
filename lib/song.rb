@@ -29,7 +29,7 @@ class Song
     @@genres.uniq
   end
   
-  def genre_total
+  def self.genre_count
   
     epoch = 0
     count_rap = 0
