@@ -51,8 +51,8 @@ class Song
     epoch_2nd = 0
     genre_total = {}
 
-    genre_total[@@genres.uniq[0]] = [count_rap]
-    genre_total[@@genres.uniq[1]] = [count_pop]
+    genre_total[@@genres.uniq[0]] = count_rap
+    genre_total[@@genres.uniq[1]] = count_pop
     #genre_total[@@genres.uniq[2]] = [count_sd]
     
     genre_total
