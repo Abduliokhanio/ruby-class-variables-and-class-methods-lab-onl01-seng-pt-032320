@@ -61,5 +61,30 @@ class Song
   
   
   def self.artist_count
+    epoch = 0
+    artist_1 = 0
+    artist_2 = 0
+    artist_3 = 0
+
+    while epoch < @@artists.length
+    if @@artists[epoch] == @@artists.uniq[0]
+      artist_1+=1
+    elsif @@artists[epoch] == @@artists.uniq[1]
+      artist_2 +=1
+    elsif @@artists[epoch] == @@artists.uniq[2]
+      artist_3 +=1
+    end
+        
+    epoch +=1
+    end
+
+    epoch_2nd = 0
+    artist_total = {}
+
+    artist_total[@@artists.uniq[0]] = artist_1
+    artist_total[@@artists.uniq[1]] = artist_2
+    #genre_total[@@genres.uniq[2]] = [count_sd]
+    
+    artist_total
   end
 end
