@@ -58,4 +58,8 @@ class Song
     genre_total
 
   end
+  
+  
+  def self.artist_count
+  end
 end
